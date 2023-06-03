@@ -1,0 +1,21 @@
+.movie-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 980px) {
+  .container {
+    min-height: 100vh;
+    min-width: 360px;
+  }
+  .movie-info {
+    grid-template-columns: 160px 160px;
+    justify-content: center;
+    align-content: center;
+  } 
+  .movie-clicked-title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
