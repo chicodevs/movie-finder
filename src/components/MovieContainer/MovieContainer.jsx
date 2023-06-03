@@ -36,7 +36,7 @@ function MovieContainer () {
   return (
     <div className="container">
       <SearchBar onSubmit={handleSubmit} movieName={movieName}/>
-      <h1 className="movie-clicked-title">{movieClicked ? `Movies like ${movieClicked.title}` : ''}</h1>
+      <h1 className="movie-clicked-title">{movieClicked ? `Movies like ${movieClicked.title}` : 'Search a movie and click on the card to find  suggestions'}</h1>
       <div className="movie-info">
         {movieList.map(movie => (
           <MovieCard movie={movie} key={movie.id} clickedMovie={findSimilarMovies}/>
