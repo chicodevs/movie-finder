@@ -1,4 +1,5 @@
 import './styles.css';
+
 /* eslint-disable react/prop-types */
 
 function MovieCard ({movie, clickedMovie}) {
