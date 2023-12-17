@@ -1,1 +1,1 @@
-Simple React + Vite project
+React + Vite project to find similar movies

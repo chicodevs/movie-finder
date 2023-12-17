@@ -17,7 +17,7 @@ function MovieContainer () {
   async function getMovie(movieTitle) {
     try {
       setMovieClicked(undefined)
-      const res = await fetch('https://api.themoviedb.org/3/search/movie?api_key=0b425d9598bbdec758cd0722e080a0b4&query='+movieTitle).then((response) => response.json())
+      const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=`+movieTitle).then((response) => response.json())
       setMovieList(res.results)
     } catch (error) {
       console.log(error)
@@ -27,7 +27,7 @@ function MovieContainer () {
     try {
       setMovieClicked(movie)
       setMovieName("")
-      const res = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/recommendations?api_key=0b425d9598bbdec758cd0722e080a0b4&language=en-US&page=1`).then((response) => response.json())
+      const res = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/recommendations?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&page=1`).then((response) => response.json())
       setMovieList(res.results)
     } catch (error) {
       console.log(error)
